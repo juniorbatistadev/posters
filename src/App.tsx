@@ -37,7 +37,7 @@ function App() {
   };
 
   return (
-    <Container bgColor="gray.100" maxW="full" minHeight={"100vh"} padding="10">
+    <Container bgColor="gray.100" maxW="full" minHeight={"100vh"} padding="5">
       <Heading color="gray.600" m="5" size="2xl">
         Novatech Posters App
       </Heading>
