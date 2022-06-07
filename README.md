@@ -1,6 +1,32 @@
-# Getting Started with Create React App
+<!-- GETTING STARTED -->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Getting Started
+
+Make sure to clone or pull this repo to your local machine.
+
+### Prerequisites
+
+This is an example of how to list things you need to use the software and how to install them.
+
+- npm
+  ```sh
+  npm install npm@latest -g
+  ```
+
+### Installation and running the app
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/juniorbatistadev/posters.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Let's run the app
+   ```sh
+   npm start
+   ```
 
 ## Available Scripts
 
@@ -8,39 +34,45 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Runs the app in the development mode.
+Open [http://localhost:3000](http://localhost:3000)
 
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technical Questions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### CSS Framework or Pure CSS ?
 
-### `npm run eject`
+I used a componet library called Chakra UI for the following reasons:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Well designed components without a designer.
+- Fast development, I can focus on the fuctionality insted of the design.
+- Accessible: Chakra UI strictly follows WAI-ARIA standards for all components.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Redux or Context Api ?
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+This was an easy decision, redux is NOT a fix-it-all solution.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+As Pete Hunt, one of the early contributors to React, says:
 
-## Learn More
+> You'll know when you need Flux. If you aren't sure if you need it, you don't need it.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Similarly, Dan Abramov, one of the creators of Redux, says:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+> I would like to amend this: don't use Redux until you have problems with vanilla React.
+
+This is what the redux docs says about when we shoudl use redux:
+
+- You have large amounts of application state that are needed in many places in the app
+- The app state is updated frequently
+- The logic to update that state may be complex
+- The app has a medium or large-sized codebase, and might be worked on by many people
+- You need to see how that state is being updated over time
+
+** NONE of this apply to our app. **
